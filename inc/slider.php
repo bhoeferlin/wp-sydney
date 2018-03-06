@@ -106,7 +106,10 @@ function sydney_slider_button() {
     }
 
     if ($slider_button) {
-        return '<a href="' . esc_url($slider_button_url) . '" class="roll-button button-slider">' . esc_html($slider_button) . '</a>';
+        //return '<a href="' .esc_url($slider_button_url) . '" class="roll-button button-slider">' . esc_html($slider_button) . '</a>';
+		return '<form action="' . esc_url($slider_button_url) .'">
+				  <input type="text" name="title_search"><input type="submit" value="' . esc_html($slider_button) . '"></form>'; 
+
     }
 
 }
